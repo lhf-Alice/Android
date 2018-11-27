@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.ChangeWallpaperActivity">
 
-    <Button
-        android:id="@+id/btn_change_wallpaper"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_change_wallpaper"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="更换壁纸" />
 
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
 </android.support.constraint.ConstraintLayout>
