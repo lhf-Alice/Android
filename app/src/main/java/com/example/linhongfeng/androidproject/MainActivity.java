@@ -9,13 +9,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.linhongfeng.androidproject.activity.ApplyRightActivity;
 import com.example.linhongfeng.androidproject.activity.ChangeWallpaperActivity;
 
 import java.io.IOException;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button mChangeWallpaper;
+    private Button mChangeWallpaper, mApplyRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         mChangeWallpaper = findViewById(R.id.btn_change_wallpaper);
+        mApplyRight = findViewById(R.id.btn_apply_for_right);
         mChangeWallpaper.setOnClickListener(this);
+        mApplyRight.setOnClickListener(this);
     }
 
     @Override
@@ -35,7 +38,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_change_wallpaper:
                 Intent intent = new Intent(MainActivity.this, ChangeWallpaperActivity.class);
                 startActivity(intent);
-                initSkin();
+
+                break;
+            case R.id.btn_apply_for_right:
+                Intent intent1 = new Intent(MainActivity.this, ApplyRightActivity.class);
+                startActivity(intent1);
                 break;
         }
     }
